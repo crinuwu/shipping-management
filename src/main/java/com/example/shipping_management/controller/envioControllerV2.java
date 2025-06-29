@@ -1,26 +1,28 @@
 package com.example.shipping_management.controller;
 
+import com.example.shipping_management.assemblers.envioModelAssembler;
 import com.example.shipping_management.model.envio;
 import com.example.shipping_management.services.envioService;
-
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.MediaTypes;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @RestController
 @RequestMapping("/api/v0/envios")
-@Tag(name = "envios", description = "Operaciones relacionadas con los envios")
-public class envioController {
+public class envioControllerV2 {
 
     @Autowired
     private envioService envioService;
 
     @GetMapping
-    @Operation(summary = "Obtener todos los envios", description = "Obtiene una lista de todas los envios")
     public List<envio> getEnvios() {
         return envioService.getEnvios();
     }

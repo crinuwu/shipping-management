@@ -45,6 +45,23 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- Aqui agregamos la dependencia de mockito -->
+		<dependencia>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependencia>
+		<!-- Aqui agregamos la dependencia de junit -->
+		<dependencia>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependencia>
+		<!-- Aqui agregamos la dependencia de junit -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -55,6 +72,18 @@
 			<version>8.0.33</version> <!-- Asegúrate de usar una versión compatible -->
 			<scope>runtime</scope>
 		</dependency>
+		<!-- Aqui agregamos la dependencia de datafaker -->
+		<dependency>
+61 			<groupId>net.datafaker</groupId>
+62 			<artifactId>datafaker</artifactId>
+63 			<version>2.4.2</version>
+64 		</dependency>
+		<!-- Aquí agregamos la dependencia de Swagger / Springdoc OpenAPI -->
+    	<dependency>
+        <groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.8.9</version>
+    	</dependency>
 	</dependencies>
 
 	<build>
